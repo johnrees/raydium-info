@@ -22,7 +22,10 @@ function App() {
   return (
     <div className="App">
       {address ? (
-        <h1>Connected to {address}</h1>
+        <>
+          <h1>Connected to {address}</h1>
+          <button onClick={wallet?.disconnect}>Disconnect</button>
+        </>
       ) : (
         <button onClick={wallet?.connect}>Connect to Sollet</button>
       )}
